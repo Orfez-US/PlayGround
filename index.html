@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#eff8df">
+  <title>Mosslight Meadow — Creature Keeper</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Mosslight Meadow home"><span class="brand-mark">✿</span><span>Mosslight <b>Meadow</b></span></a>
+      <div class="top-stats">
+        <div class="stat-pill"><span>✦</span><b id="spark-count">0</b><small>SPARKS</small></div>
+        <div class="stat-pill berry-pill"><span>●</span><b id="berry-count">8</b><small>BERRIES</small></div>
+        <button class="icon-button sound-toggle" id="sound-toggle" aria-label="Toggle sound" title="Toggle sound">♫</button>
+      </div>
+    </header>
+    <main class="layout">
+      <section class="play-column">
+        <div class="welcome-row"><div><p class="eyebrow">A LITTLE WORLD, FULL OF WONDER</p><h1>Come say hello.</h1><p class="subtitle">Wander the wilds and befriend the little souls who live here.</p></div><div class="weather"><span>☀</span><div><b>Sunny day</b><small>Perfect for exploring</small></div></div></div>
+        <nav class="zone-tabs" aria-label="Explore locations" id="zone-tabs"></nav>
+        <section class="meadow-card" aria-label="Explore the meadow">
+          <div class="scene-top"><span class="location-tag"><i></i><span id="zone-name">Dewdrop Grove</span></span><span class="scene-time">☀ &nbsp; DAY 1</span></div>
+          <canvas id="meadow" aria-label="A peaceful illustrated meadow. Tap a creature to meet it."></canvas>
+          <div class="scene-caption"><span>🌿 <span id="zone-desc">A soft green beginning, where the shy ones peek out.</span></span><span class="tap-hint">TAP A FRIEND TO MEET THEM <b>↗</b></span></div>
+          <div class="explore-action"><button id="search-button" class="primary-button"><span class="button-icon">⌕</span><span><b>Rustle the grass</b><small>See who comes out to play</small></span><span class="button-arrow">→</span></button><div class="search-note">A surprise is just around the bend <span>✧</span></div></div>
+        </section>
+        <section class="field-note"><span class="note-icon">📖</span><p><b>Field note</b><span id="field-note-text">Every creature has a favorite snack. A little kindness goes a long way.</span></p><span class="note-stars">✧</span></section>
+      </section>
+      <aside class="journal-card">
+        <div class="journal-heading"><div><p class="eyebrow">YOUR GROWING COLLECTION</p><h2>Field journal <span>✦</span></h2></div><button id="journal-expand" class="text-button">View all <span>↗</span></button></div>
+        <div class="progress-block"><div class="progress-copy"><span>MEADOW FRIENDS</span><b><span id="caught-count">0</span><i> / 30</i></b></div><div class="progress-track"><div id="progress-fill"></div></div><p id="progress-quip">The first hello is always the sweetest.</p></div>
+        <div class="collection-grid" id="collection-grid" aria-live="polite"></div>
+        <div class="journal-footer"><span class="legend-dot"></span><span>Made a new friend</span><span class="footer-total" id="journal-footer-total">0 / 30</span></div>
+      </aside>
+    </main>
+    <footer class="bottom-note"><span>✿</span> Take your time. The meadow isn't going anywhere. <span>✿</span></footer>
+  </div>
+  <div class="modal-backdrop hidden" id="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="encounter-modal" id="modal-content"></div></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="game.js"></script>
+</body>
+</html>

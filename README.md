@@ -16,3 +16,19 @@
 - 👤 [Explore the creator's projects](https://omgithub.com/Orfez-US).
 - 🌍 [Create with OMGithub](https://omgithub.com).
 <!-- omgithub:readme:end -->
+
+## Mosslight Meadow
+
+A cozy, touch-friendly creature-collecting game. Explore five habitats, meet 30 unique friends, offer berries to earn their trust, and fill your field journal. Progress is saved in your browser.
+
+### Play locally
+
+Open `index.html` in a browser, or serve this folder with any static web server (for example, `python3 -m http.server 3002`).
+
+### How to play
+
+- Choose a habitat and tap **Rustle the grass** to meet a creature.
+- Offer berries to make shy friends more trusting, then invite them home.
+- Tap the little visitors in the illustrated scene to meet them directly.
+- Use **View all** in your field journal to see all 30 collection slots.
+
