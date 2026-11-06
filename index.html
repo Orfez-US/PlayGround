@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Meteor Mine Defense</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">Meteor Mine Defense</div>
+        <div class="stats">
+          <span>Score: <strong id="score">0</strong></span>
+          <span>Lives: <strong id="lives">3</strong></span>
+          <span>Level: <strong id="level">1</strong></span>
+        </div>
+      </header>
+
+      <main class="game-panel">
+        <canvas id="gameCanvas" width="900" height="600" aria-label="Meteor defense game"></canvas>
+
+        <div id="startOverlay" class="overlay visible" aria-live="polite">
+          <div class="panel">
+            <h1>Meteor Mine Defense</h1>
+            <p>Defend the orbital base from incoming meteor swarms.</p>
+            <ul>
+              <li>Move with A/D or Left/Right arrows</li>
+              <li>Fire with Space, W, or tap the fire button</li>
+              <li>Survive as long as you can</li>
+            </ul>
+            <button id="startButton" class="primary-button">Start Mission</button>
+          </div>
+        </div>
+
+        <div id="gameOverOverlay" class="overlay hidden" aria-live="polite">
+          <div class="panel">
+            <h2>Mission Failed</h2>
+            <p>Your final score: <strong id="finalScore">0</strong></p>
+            <button id="restartButton" class="primary-button">Retry</button>
+          </div>
+        </div>
+      </main>
+
+      <div class="controls" aria-label="Touch controls">
+        <button class="control-button" data-action="left">◀</button>
+        <button class="control-button" data-action="fire">FIRE</button>
+        <button class="control-button" data-action="right">▶</button>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
